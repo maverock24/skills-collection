@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-09-06T20:20:00.000Z",
+  "accountId": 999999,
+  "source": "mock-newrelic",
+  "windowMinutes": 60,
+  "services": [
+    { "nrName": "checkout-api", "guid": "Mzk2Njc2OEFQTV9BUFBMSUNBVElPTg", "type": "APM-APPLICATION", "language": "nodejs",
+      "vitals": { "apdex": 0.96, "errorRatePct": 0.4, "throughputRpm": 412, "latencyP95Ms": 84 } },
+    { "nrName": "orders-api", "guid": "NDIwMzM0Nz1BUE1fQVBQTElDQVRJT04", "type": "APM-APPLICATION", "language": "python",
+      "vitals": { "apdex": 0.52, "errorRatePct": 11.7, "throughputRpm": 96, "latencyP95Ms": 610 } },
+    { "nrName": "catalog-api", "guid": "MTAwNjEyOFxBUFFfQVBQTElDQVRJT04", "type": "APM-APPLICATION", "language": "go",
+      "vitals": { "apdex": 0.99, "errorRatePct": 0.1, "throughputRpm": 1304, "latencyP95Ms": 22 } },
+    { "nrName": "payment-gateway", "guid": "MjIzNDU2NzxBUFFfQVBQTElDQVRJT04", "type": "APM-APPLICATION", "language": "java",
+      "vitals": { "apdex": 0.9, "errorRatePct": 1.1, "throughputRpm": 204, "latencyP95Ms": 140 } }
+  ],
+  "connections": [
+    { "source": "checkout-api", "target": "orders-api", "type": "http", "samples": 4820 },
+    { "source": "checkout-api", "target": "catalog-api", "type": "http", "samples": 9740 },
+    { "source": "checkout-api", "target": "payment-gateway", "type": "http", "samples": 1801 },
+    { "source": "orders-api", "target": "catalog-api", "type": "http", "samples": 2310 }
+  ]
+}
